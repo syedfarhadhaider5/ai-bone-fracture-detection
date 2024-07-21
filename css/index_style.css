@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    position: relative;
+}
+#drop-area {
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 20px;
+}
+.left-side-area{
+    margin-top: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    height: max-content;
+}
+.file-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.progress {
+    height: 5px;
+    border-radius: 0;
+}
+.progress-bar{
+    background-color: red;
+}
+#progress-bar-container {
+    margin-top: 20px;
+}
+#file-list{
+    font-size: small;
+    text-align: center;
+}
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 216, 230, 0.8); /* semi-transparent light blue background */
+    z-index: 9999; /* Ensure it's on top of other content */
+    display: none; /* Initially hidden */
+}
+
+.loading-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #3498db; /* Blue color */
+    border-radius: 50%;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(-100px); /* Adjust height as needed */
+    }
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.highlight {
+    border: 2px dashed #007bff; !important; /* Example border style */
+    /* Add any other styles you want to apply when the element is highlighted */
+}
+.entity-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Very light shadow */
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 5px;
+}
+.custom-input {
+    /*border: 1px solid #ced4da;*/
+    background-color: #ffffff;
+}
+.custom-input .form-control{
+    border: none !important;
+    box-shadow: none;
+}
+.custom-input .custom-input button {
+    border-radius: 100px;
+}
+
+.loading {
+    display: none;
+}
+
+.loading  .active {
+    display: block !important;
+}
+
+#form-frame {
+    width: 100%;
+    height: 50vh; /* Adjust height as needed */
+}
+.btn-primary{
+    background-color: #127dff;
+}
+.background-svg-1 {
+    position: absolute;
+    top: -16px; /* Adjust top position as needed */
+    right: calc(40% - 92px); /* Adjust right position as needed */
+    width: 184px; /* Set SVG width */
+    height: 192px; /* Set SVG height */
+    z-index: -1; /* Ensure the SVG stays behind other content */
+    transition: ease-in-out transform-gpu;
+    color: #ffc83e;
+}
+.background-svg-2 {
+    position: absolute;
+    top: -16px; /* Adjust top position as needed */
+    right: calc(10% - 92px); /* Adjust right position as needed */
+    width: 184px; /* Set SVG width */
+    height: 100px; /* Set SVG height */
+    z-index: -1; /* Ensure the SVG stays behind other content */
+    transition: ease-in-out transform-gpu;
+    color: #ffc83e;
+}
+.background-svg-3 {
+    position: absolute;
+    top: -16px; /* Adjust top position as needed */
+    right: calc(90% - 92px); /* Adjust right position as needed */
+    width: 184px; /* Set SVG width */
+    height: 100px; /* Set SVG height */
+    z-index: -1; /* Ensure the SVG stays behind other content */
+    transition: ease-in-out transform-gpu;
+    color: #ffc83e;
+}
+.background-svg-4 {
+    position: absolute;
+    top: 250px; /* Adjust top position as needed */
+    right: calc(98% - 92px); /* Adjust right position as needed */
+    width: 184px; /* Set SVG width */
+    height: 100px; /* Set SVG height */
+    z-index: -1; /* Ensure the SVG stays behind other content */
+    transition: ease-in-out transform-gpu;
+    color: #ffc83e;
+}
+@media (min-width: 768px) {
+    .background-svg {
+        display: block;
+    }
+}
